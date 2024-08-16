@@ -6,5 +6,5 @@ export default defineNuxtConfig({
             },
         }
     },
-    modules: ['nuxt-icon', '@vueuse/nuxt', '@nuxt/fonts', '@nuxtjs/tailwindcss', '@nooku/nuxt'],
+    modules: ['@vueuse/nuxt', '@nuxt/fonts', '@nuxtjs/tailwindcss', '@nooku/nuxt', '@nuxt/icon'],
 });

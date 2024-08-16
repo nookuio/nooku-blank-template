@@ -1,5 +1,7 @@
+<script setup lang="ts"></script>
+
 <template>
-    <div class="flex flex-col items-center justify-center">
-        <h2>Homepage</h2>
-    </div>
+  <div class="flex flex-col items-center">
+    <h2 class="text-lg font-medium">Template</h2>
+  </div>
 </template>

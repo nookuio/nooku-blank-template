@@ -10,12 +10,13 @@
         "postinstall": "nuxt prepare"
     },
     "devDependencies": {
-        "@nooku/nuxt": "^1.1.4",
+        "@iconify/vue": "^4.1.2",
+        "@nooku/nuxt": "^1.1.13",
+        "@nuxt/icon": "^1.4.5",
         "@nuxtjs/tailwindcss": "^6.12.0",
         "@vueuse/core": "^10.10.0",
         "@vueuse/nuxt": "^10.10.0",
-        "nuxt-icon": "^0.6.10",
-        "nuxt": "^3.11.2"
+        "nuxt": "^3.12.4"
     },
     "dependencies": {
         "@nuxt/fonts": "^0.7.0"
