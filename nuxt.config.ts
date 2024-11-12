@@ -4,7 +4,7 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@nuxt/fonts',
     '@nuxtjs/tailwindcss',
-    '@nooku/nuxt',
+    '@nookuio/nuxt',
     '@nuxt/icon',
   ],
   future: {
