@@ -1,13 +1,11 @@
 export default defineNuxtConfig({
   vite: { server: { hmr: { overlay: false } } },
   modules: [
+    '@nookuio/nuxt',
     '@vueuse/nuxt',
     '@nuxt/fonts',
     '@nuxtjs/tailwindcss',
-    '@nookuio/nuxt',
     '@nuxt/icon',
   ],
-  future: {
-    compatibilityVersion: 4,
-  },
+  future: { compatibilityVersion: 4 },
 });
