@@ -1,11 +1,9 @@
+import tailwindcss from '@tailwindcss/vite';
+
 export default defineNuxtConfig({
-  vite: { server: { hmr: { overlay: false } } },
-  modules: [
-    '@nookuio/nuxt',
-    '@vueuse/nuxt',
-    '@nuxt/fonts',
-    '@nuxtjs/tailwindcss',
-    '@nuxt/icon',
-  ],
+  css: ['~/assets/css/main.css'],
+  vite: { server: { hmr: { overlay: false } }, plugins: [tailwindcss()] },
+  modules: ['@vueuse/nuxt', '@nuxt/fonts', '@nuxt/icon', '@nookuio/nuxt'],
   future: { compatibilityVersion: 4 },
+  compatibilityDate: '2025-02-05',
 });
