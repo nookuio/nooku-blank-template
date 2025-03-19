@@ -1,74 +1,130 @@
+<script setup lang="ts">
+let features = [
+  {
+    icon: 'oui:vis-builder',
+    title: 'Visual Editor',
+    description: 'Design your UI with our intuitive editor',
+    color: 'cyan',
+  },
+  {
+    icon: 'pepicons-pencil:paint-pallet',
+    title: 'Tailwind CSS',
+    description: 'Style and Customize with Tailwind CSS',
+    color: 'purple',
+  },
+  {
+    icon: 'carbon:flow',
+    title: 'Workflow Builder',
+    description: 'Add logic with the visual workflow builder',
+    color: 'pink',
+  },
+  {
+    icon: 'carbon:app-connectivity',
+    title: 'Connectivity',
+    description: 'Connect to any database, services and APIs',
+    color: 'amber',
+  },
+];
+</script>
+
 <template>
-  <div
-    class="min-h-screen flex flex-col justify-center items-center bg-gradient-to-br from-blue-50 to-pink-50"
+  <main
+    class="min-h-[1000px] relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"
   >
     <div
-      class="relative pl-4 pr-4 pt-10 pb-10 bg-white shadow-2xl shadow-neutral-200 sm:rounded-3xl sm:p-20"
+      class="w-full flex items-center justify-center bg-gradient-to-br transition-colors duration-300 from-blue-50/50 to-pink-50/50 flex-col h-[1000px] dark:from-slate-950 dark:to-blue-950"
     >
-      <div class="ml-auto mr-auto max-w-md">
+      <div class="text-center mb-12">
         <div class="flex justify-center mb-8">
           <img
-            class="h-16 w-auto rounded-lg"
+            class="h-20 w-auto rounded-xl shadow-lg duration-300 hover:scale-105 transform transition-transform"
             src="https://nooku.io/favicon.ico"
             alt="Nooku Logo"
           />
         </div>
-        <h1 class="text-3xl font-extrabold text-gray-900 text-center mb-6">
+        <h1
+          class="text-4xl font-black bg-gradient-to-r from-blue-600 to-purple-600 text-transparent mb-4 sm:text-5xl dark:from-blue-400 dark:to-violet-400 bg-clip-text"
+        >
           Welcome to Nooku
         </h1>
-        <div class="divide-y divide-gray-200">
-          <div
-            class="pb-8 text-base leading-6 text-gray-700 sm:text-lg sm:leading-7 space-y-4"
-          >
-            <p class="text-center italic text-gray-600">
-              The low-code IDE for building modern web applications
-            </p>
-            <ul class="text-base space-y-4">
-              <li class="flex items-center duration-300 ease-in-out">
-                <span
-                  class="flex items-center justify-center w-8 h-8 bg-cyan-100 rounded-full text-blue-700 flex-shrink-0"
-                  ><Icon name="oui:vis-builder" size="18"
-                /></span>
-                <p class="ml-4">Design your UI with our intuitive editor</p>
-              </li>
-              <li class="flex items-center duration-300 ease-in-out">
-                <span
-                  class="flex items-center justify-center w-8 h-8 bg-purple-100 rounded-full text-purple-800 flex-shrink-0"
-                  ><Icon name="pepicons-pencil:paint-pallet" size="18"
-                /></span>
-                <p class="ml-4">Style and Customize with Tailwind CSS</p>
-              </li>
-              <li class="flex items-center duration-300 ease-in-out">
-                <span
-                  class="flex items-center justify-center w-8 h-8 bg-pink-100 rounded-full text-red-400 flex-shrink-0"
-                  ><Icon name="carbon:flow" size="18"
-                /></span>
-                <p class="ml-4">Add logic with the visual workflow builder</p>
-              </li>
-              <li class="flex items-center duration-300 ease-in-out">
-                <span
-                  class="flex items-center justify-center w-8 h-8 bg-yellow-100 rounded-full text-yellow-500 flex-shrink-0"
-                  ><Icon name="carbon:app-connectivity" size="18"
-                /></span>
-                <p class="ml-4">Connect to any database, services and APIs.</p>
-              </li>
-            </ul>
-          </div>
-          <div
-            class="pt-6 text-base leading-6 font-bold flex flex-col gap-y-5 sm:text-lg sm:leading-7"
-          >
-            <a
-              class="block w-full pt-3 pb-3 pl-6 pr-6 text-center text-white font-semibold bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg shadow-md transition-all duration-300 ease-in-out"
-              href="https://discord.com/invite/SswP243maG"
-              target="_blank"
-              >Join Community</a
+        <p class="text-lg text-slate-400 mx-auto max-w-2xl">
+          The next-generation low-code IDE for building modern web applications
+          with ease and flexibility
+        </p>
+      </div>
+      <div class="grid gap-6 w-full mb-12 grid-cols-1 md:grid-cols-2 max-w-4xl">
+        <div
+          class="p-6 rounded-2xl backdrop-blur-lg border transition-all duration-300 bg-white/5 border-white/10 hover:border-white/20 group"
+          v-for="(feature, currentIndex) in features"
+          :key="feature.title"
+        >
+          <div class="flex items-center space-x-4">
+            <div
+              :class="`flex items-center justify-center w-12 h-12 rounded-xl bg-${feature.color}-500/20 text-${feature.color}-400 group-hover:scale-110 transition-transform duration-300`"
             >
-            <p class="font-normal text-sm text-center text-neutral-500">
-              Powered by Vue 3, Nuxt, and Tailwind CSS
-            </p>
+              <Icon class="text-neutral-300" :name="feature.icon" size="24" />
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold text-white mb-1">
+                {{ feature.title }}
+              </h3>
+              <p class="text-slate-400">{{ feature.description }}</p>
+            </div>
           </div>
         </div>
       </div>
+      <div class="flex flex-col items-center gap-6 w-full max-w-md">
+        <a
+          class="w-full py-4 px-8 text-center text-white font-semibold bg-blue-500/80 backdrop-blur-sm rounded-xl shadow-lg transition-all duration-300 border border-white/20 hover:bg-blue-500/90 hover:shadow-xl transform hover:-translate-y-1"
+          href="https://discord.com/invite/SswP243maG"
+          target="_blank"
+        >
+          Join Our Community
+        </a>
+        <div class="flex items-center gap-2 text-sm text-slate-400">
+          <span>Powered by</span
+          ><span class="inline-flex items-center gap-2"
+            ><Icon class="h-4" name="logos:vue" /><Icon
+              class="h-4"
+              name="logos:nuxt-icon" /><Icon
+              class="h-4"
+              name="logos:tailwindcss-icon" /></span
+          ><span class="inline-flex items-center gap-2" v-if="false"
+            ><Icon class="h-4" name="logos:vue" /><Icon
+              class="h-4"
+              name="logos:nuxt-icon" /><Icon
+              class="h-4"
+              name="logos:tailwindcss-icon"
+          /></span>
+        </div>
+      </div>
     </div>
-  </div>
+  </main>
 </template>
+
+<style>
+.animate-blob {
+  animation: blob 7s infinite;
+}
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+</style>
