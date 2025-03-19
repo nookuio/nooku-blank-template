@@ -32,7 +32,7 @@ let features = [
     class="min-h-[1000px] relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"
   >
     <div
-      class="w-full flex items-center justify-center bg-gradient-to-br transition-colors duration-300 from-blue-50/50 to-pink-50/50 flex-col h-[1000px] dark:from-slate-950 dark:to-blue-950"
+      class="w-full flex items-center justify-center bg-gradient-to-br transition-colors duration-300 from-slate-950 to-blue-950 flex-col h-[1000px]"
     >
       <div class="text-center mb-12">
         <div class="flex justify-center mb-8">
@@ -43,7 +43,7 @@ let features = [
           />
         </div>
         <h1
-          class="text-4xl font-black bg-gradient-to-r from-blue-600 to-purple-600 text-transparent mb-4 sm:text-5xl dark:from-blue-400 dark:to-violet-400 bg-clip-text"
+          class="text-4xl font-black bg-gradient-to-r from-blue-400 to-violet-400 text-transparent mb-4 sm:text-5xl bg-clip-text"
         >
           Welcome to Nooku
         </h1>
