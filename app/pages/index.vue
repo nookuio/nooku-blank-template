@@ -25,6 +25,8 @@ let features = [
     color: 'amber',
   },
 ];
+
+const communityLink = ref('https://discord.com/invite/SswP243maG');
 </script>
 
 <template>
@@ -76,7 +78,7 @@ let features = [
       <div class="flex flex-col items-center gap-6 w-full max-w-md">
         <a
           class="w-full py-4 px-8 text-center text-white font-semibold bg-blue-500/80 backdrop-blur-sm rounded-xl shadow-lg transition-all duration-300 border border-white/20 hover:bg-blue-500/90 hover:shadow-xl transform hover:-translate-y-1"
-          href="https://discord.com/invite/SswP243maG"
+          :href="communityLink"
           target="_blank"
         >
           Join Our Community
