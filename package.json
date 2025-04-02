@@ -10,15 +10,15 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@nookuio/nuxt": "^1.2.8",
+    "@nookuio/nuxt": "^1.4.9",
     "@vueuse/core": "^13.0.0",
     "@vueuse/nuxt": "^13.0.0",
-    "nuxt": "^3.16.1"
+    "nuxt": "^3.16.2"
   },
   "dependencies": {
     "@nuxt/fonts": "^0.11.0",
     "@nuxt/icon": "^1.11.0",
-    "@tailwindcss/vite": "^4.0.15",
-    "tailwindcss": "^4.0.15"
+    "@tailwindcss/vite": "4.0.7",
+    "tailwindcss": "4.0.7"
   }
 }
