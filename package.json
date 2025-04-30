@@ -13,7 +13,7 @@
     "@nookuio/nuxt": "^1.5.5",
     "@vueuse/core": "^13.1.0",
     "@vueuse/nuxt": "^13.1.0",
-    "nuxt": "^3.17.0"
+    "nuxt": "^3.17.1"
   },
   "dependencies": {
     "@nuxt/fonts": "^0.11.2",
