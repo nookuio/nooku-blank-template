@@ -9,16 +9,17 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
-  "devDependencies": {
-    "@nookuio/nuxt": "^1.5.7",
-    "@vueuse/core": "^13.2.0",
-    "@vueuse/nuxt": "^13.2.0",
-    "nuxt": "^3.17.3"
-  },
   "dependencies": {
-    "@nuxt/fonts": "^0.11.4",
-    "@nuxt/icon": "^1.13.0",
+    "@nuxt/fonts": "^0.12.1",
+    "@nuxt/icon": "^2.1.1",
+    "@vueuse/core": "^14.1.0",
+    "@vueuse/nuxt": "^14.1.0",
+    "nuxt": "^4.2.2",
     "@tailwindcss/vite": "4.0.7",
     "tailwindcss": "4.0.7"
+  },
+  "devDependencies": {
+    "@nookuio/nuxt": "^2.0.0",
+    "typescript": "^5.9.3"
   }
 }

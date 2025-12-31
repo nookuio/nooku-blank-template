@@ -1,38 +1,36 @@
 <script setup lang="ts">
-let features = [
+const features = [
   {
     icon: 'oui:vis-builder',
     title: 'Visual Editor',
     description: 'Design your UI with our intuitive editor',
-    color: 'cyan',
+    color: 'cyan'
   },
   {
     icon: 'pepicons-pencil:paint-pallet',
     title: 'Tailwind CSS',
     description: 'Style and Customize with Tailwind CSS',
-    color: 'purple',
+    color: 'purple'
   },
   {
     icon: 'carbon:flow',
     title: 'Workflow Builder',
     description: 'Add logic with the visual workflow builder',
-    color: 'pink',
+    color: 'pink'
   },
   {
     icon: 'carbon:app-connectivity',
     title: 'Connectivity',
     description: 'Connect to any database, services and APIs',
-    color: 'amber',
-  },
+    color: 'amber'
+  }
 ];
 
-const communityLink = ref('https://discord.com/invite/SswP243maG');
+const communityLink = 'https://discord.com/invite/SswP243maG';
 </script>
 
 <template>
-  <main
-    class="min-h-[1000px] relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"
-  >
+  <main class="min-h-[1000px] relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
     <div
       class="w-full flex items-center justify-center bg-gradient-to-br transition-colors duration-300 from-slate-950 to-blue-950 flex-col h-[1000px]"
     >
@@ -50,8 +48,7 @@ const communityLink = ref('https://discord.com/invite/SswP243maG');
           Welcome to Nooku
         </h1>
         <p class="text-lg text-slate-400 mx-auto max-w-2xl">
-          The next-generation low-code IDE for building modern web applications
-          with ease and flexibility
+          The next-generation low-code IDE for building modern web applications with ease and flexibility
         </p>
       </div>
       <div class="grid gap-6 w-full mb-12 grid-cols-1 md:grid-cols-2 max-w-4xl">
@@ -64,7 +61,11 @@ const communityLink = ref('https://discord.com/invite/SswP243maG');
             <div
               :class="`flex items-center justify-center w-12 h-12 rounded-xl bg-${feature.color}-500/20 text-${feature.color}-400 group-hover:scale-110 transition-transform duration-300`"
             >
-              <Icon class="text-neutral-300" :name="feature.icon" size="24" />
+              <Icon
+                class="text-neutral-300"
+                :name="feature.icon"
+                size="24"
+              />
             </div>
             <div>
               <h3 class="text-lg font-semibold text-white mb-1">
@@ -86,13 +87,19 @@ const communityLink = ref('https://discord.com/invite/SswP243maG');
         <div class="flex items-center gap-2 text-sm text-slate-400">
           <span>Powered by</span
           ><span class="inline-flex items-center gap-2"
-            ><Icon class="h-4" name="logos:vue" /><Icon
+            ><Icon
+              class="h-4"
+              name="logos:vue" /><Icon
               class="h-4"
               name="logos:nuxt-icon" /><Icon
               class="h-4"
               name="logos:tailwindcss-icon" /></span
-          ><span class="inline-flex items-center gap-2" v-if="false"
-            ><Icon class="h-4" name="logos:vue" /><Icon
+          ><span
+            class="inline-flex items-center gap-2"
+            v-if="false"
+            ><Icon
+              class="h-4"
+              name="logos:vue" /><Icon
               class="h-4"
               name="logos:nuxt-icon" /><Icon
               class="h-4"
